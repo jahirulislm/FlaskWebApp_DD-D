@@ -32,14 +32,20 @@
   
   <body>
     <div class='container'>
-    <h1>Web Application</h1>
+    <h1>{{c_name}}</h1>
     <img id="banner" src="https://flaskwebappdd-d.jahirulislamdev.repl.co/static/pexels.webp" />
 
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt arcu non sodales neque sodales ut etiam. Scelerisque in dictum non consectetur. Adipiscing at in tellus integer. Vulputate ut pharetra sit amet aliquam.
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt arcu non sodales neque sodales ut etiam. Scelerisque in dictum non consectetur. Adipiscing at in tellus integer. Vulputate ut pharetra sit amet aliquam.</p>
    
-    <h2>Open Position</h2>
-    <p>TOOD - Show jobs here</p>
+    <h2 style='margin-bottom:24px;'>Open Position</h2>
+   
+      <div>
+        {% for job in jobs %}
+        {% include 'jobItem.html' %}
+        {% endfor %}
+      </div>
+
     <div style="text-align:center;">
       <button>Contact Us</button>
     </div>
